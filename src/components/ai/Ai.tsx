@@ -98,7 +98,7 @@ export default function Ai() {
                 subtitle="Invoke a language model over your tracking slate. Each request pulls fresh 200-day trajectory metrics and asks the oracle for a verdict. Signals, not certainties."
                 stats={[
                     { label: "TARGETS", value: String(selectedCoins.length).padStart(2, "0") },
-                    { label: "ORACLE", value: "NVIDIA NIM" },
+                    { label: "ORACLE", value: "OPENAI · GPT-4o-mini" },
                     { label: "KEY", value: apiKey ? "SET" : "MISSING" }
                 ]}
             />
@@ -113,10 +113,10 @@ export default function Ai() {
                 {!apiKey ? (
                     <div className="Ai-keyForm">
                         <p className="Ai-keyHint">
-                            Obtain a free NVIDIA NIM key from <span className="Ai-keyCode">build.nvidia.com</span>. It will be stored only in your browser.
+                            Provide an OpenAI API key from <span className="Ai-keyCode">platform.openai.com</span>. It will be stored only in your browser.
                         </p>
                         <div className="Ai-keyRow">
-                            <span className="Ai-keyPrompt">nvapi-&gt;</span>
+                            <span className="Ai-keyPrompt">sk-&gt;</span>
                             <input
                                 type="password"
                                 value={keyInput}

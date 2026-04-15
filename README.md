@@ -1,3 +1,4 @@
+<img width="2534" height="1240" alt="Screenshot 2026-04-15 151125" src="https://github.com/user-attachments/assets/4ceb61b2-2b0c-46ef-8ddb-aa7b2ded8c44" />
 # Cryptonite
 
 A cryptocurrency dashboard that displays real-time data on the 100 most popular crypto coins, live price charts for user-selected coins, and AI-powered buy/sell recommendations.
@@ -23,8 +24,9 @@ npm run dev
 ```
 
 ## Screenshots
+<img width="2554" height="1268" alt="Screenshot 2026-04-15 231456" src="https://github.com/user-attachments/assets/e0f6e5ea-5b9b-4252-9b86-79f5ced9a1df" />
+<img width="2554" height="1265" alt="Screenshot 2026-04-15 231553" src="https://github.com/user-attachments/assets/b8ba861f-d50a-40af-865c-eeb5e638290c" />
 
-<!-- Add screenshots here -->
 
 ## Prompt Engineering
 

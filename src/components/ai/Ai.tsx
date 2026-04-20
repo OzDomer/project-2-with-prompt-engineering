@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { useAppSelector } from "../../redux/store"
 import type { Coin } from "../../models/Coin"
 import type { AiPromptData, AiRecommendation } from "../../models/AiRecommendation"
-import { coinDetailService } from "../../services/CoinDetailService"
+import { coinsService } from "../../services/CoinsService"
 import { aiService } from "../../services/AiService"
 import Header from "../layout/header/Header"
 import SpinnerButton from "../common/spinnerButton/SpinnerButton"
@@ -43,7 +43,7 @@ export default function Ai() {
     async function fetchSingle(coin: Coin): Promise<AiRecommendation | null> {
         updateState(coin.id, { loading: true, error: null })
         try {
-            const detail = await coinDetailService.getWithMarketData(coin.id)
+            const detail = await coinsService.getWithMarketData(coin.id)
             const md = detail.market_data
             const promptData: AiPromptData = {
                 name: detail.name,

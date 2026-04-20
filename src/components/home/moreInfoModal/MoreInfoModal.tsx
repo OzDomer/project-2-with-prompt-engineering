@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import type { Coin } from "../../../models/Coin"
 import type { CoinDetail } from "../../../models/CoinDetail"
-import { coinDetailService } from "../../../services/CoinDetailService"
+import { coinsService } from "../../../services/CoinsService"
 import Modal from "../../common/modal/Modal"
 import Spinner from "../../common/spinner/Spinner"
 import { formatCurrency } from "../../../util/format"
@@ -40,7 +40,7 @@ export default function MoreInfoModal({ coin, onClose }: MoreInfoModalProps) {
             setLoading(true)
             setError(null)
             try {
-                const data = await coinDetailService.getWithMarketData(coin.id)
+                const data = await coinsService.getWithMarketData(coin.id)
                 ;(data as CoinDetail & { _ts?: number })._ts = Date.now()
                 CACHE.set(coin.id, data)
                 if (!cancelled) setDetail(data)
